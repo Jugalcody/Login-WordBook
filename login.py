@@ -1,6 +1,6 @@
 import tkinter as tk
 root=tk.Tk()
-from PIL import Image,ImageTk
+
 from tkinter import messagebox
 name=tk.Label(text="user id : ")
 name.place(relx=0.13,rely=0.4)
@@ -16,12 +16,6 @@ pas_entry=tk.Entry()
 pas_entry.place(relx=0.36,rely=0.45)
 
 f=open("word.txt","a+")
-image=Image.open("12.jpg")
-image.resize((100,100), Image.ANTIALIAS)
-image.thumbnail((1500,700),Image.ANTIALIAS)
-photo=ImageTk.PhotoImage(image)
-label_image=tk.Label(image=photo)
-label_image.place(relx=0.22,rely=0.16)
                                               
                                             
 
