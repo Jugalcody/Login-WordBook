@@ -46,11 +46,11 @@ def click():
                                             tk.Label(text="Word Notebook").place(relx=0.09,rely=0.65)
                                             tk.Label(text="Enter a word : ").place(relx=0.09,rely=0.75)
                                             c=tk.Entry()
-                                            c.place(relx=0.3,rely=0.75)
+                                            c.place(relx=0.18,rely=0.75)
                                             b=tk.Label(text="Meaning : ")
                                             b.place(relx=0.09,rely=0.8)
                                             t=tk.Entry()
-                                            t.place(relx=0.26,rely=0.8)
+                                            t.place(relx=0.18,rely=0.8)
                                             
                                             def submit():
                                                    
