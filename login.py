@@ -22,9 +22,15 @@ cursor=my.cursor(buffered="True")
 cursor.execute("create database if not exists logindb")
 cursor.execute("use logindb")
 cursor.execute("create table if not exists logindb ( sno varchar(100)primary key,name varchar(100)unique key,password varchar(100))")                                             
-                                           
-
-store={"jugal":"#python#"}
+store={}                                           
+cursor.execute("select * from logindb")
+pp=cursor.fetchall()
+jj=list(pp)
+for i in jj:
+      cc=list(i)
+      store[cc[1]]=cc[2]
+           
+print(store)
 def click():
        name=name_entry.get()
        pas=pas_entry.get()
@@ -36,15 +42,15 @@ def click():
                                              
                                             a=f"Welcome {name}"
                                             
-                                            tk.Label(text=a,font="Bold").place(relx=0.1,rely=0.45)
-                                            tk.Label(text="Word Notebook").place(relx=0.09,rely=0.55)
-                                            tk.Label(text="Enter a word : ").place(relx=0.09,rely=0.65)
+                                            tk.Label(text=a,font="Bold").place(relx=0.1,rely=0.55)
+                                            tk.Label(text="Word Notebook").place(relx=0.09,rely=0.65)
+                                            tk.Label(text="Enter a word : ").place(relx=0.09,rely=0.75)
                                             c=tk.Entry()
-                                            c.place(relx=0.4,rely=0.65)
+                                            c.place(relx=0.3,rely=0.75)
                                             b=tk.Label(text="Meaning : ")
-                                            b.place(relx=0.09,rely=0.7)
+                                            b.place(relx=0.09,rely=0.8)
                                             t=tk.Entry()
-                                            t.place(relx=0.40,rely=0.7)
+                                            t.place(relx=0.26,rely=0.8)
                                             
                                             def submit():
                                                    
@@ -53,9 +59,9 @@ def click():
                                                     
                                                     f.write(v+"      "+oo+"\n")
                                                         
-                                            tk.Button(text="Submit",command=submit,bg="skyblue").place(relx=0.09,rely=0.75)
+                                            tk.Button(text="Submit",command=submit,bg="skyblue").place(relx=0.09,rely=0.85)
                                             
-                                            
+                                 break;           
                                               
                                             
 
